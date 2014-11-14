@@ -1,0 +1,165 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<LinearLayout
+    android:id="@+id/head_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@drawable/default_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/login_back" >
+
+     <ImageView 
+         android:id="@+id/login_root"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/root_layer_list"
+         android:paddingBottom="10dp"
+         android:paddingLeft="3dp"
+         />   
+        
+     <EditText 
+         android:id="@+id/et_userName"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:hint="输入账号"
+         android:paddingLeft="40dp"
+         android:layout_toRightOf="@+id/login_root"
+         android:background="@drawable/login_input"
+         />
+     
+     <TextView 
+         android:id="@+id/text"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="账号:"
+         android:textSize="14sp"
+         android:gravity="center"
+         android:paddingLeft="4dp"
+         android:layout_alignLeft="@+id/et_userName"
+         android:layout_alignTop="@+id/et_userName"
+         android:layout_alignBottom="@+id/et_userName"
+         />
+     <ImageView 
+         android:id="@+id/login_low"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/button2"
+         android:layout_alignRight="@+id/et_userName"/>
+
+     <EditText
+         android:id="@+id/editText1"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="8dp"
+         android:layout_below="@+id/et_userName"
+         android:layout_alignLeft="@+id/et_userName"
+         android:background="@drawable/login_input"
+         android:inputType="textPassword" 
+         android:hint="输入密码">
+     </EditText>
+
+     <CheckBox
+         android:id="@+id/checkBox1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/login_root"
+         android:layout_below="@+id/login_root"
+         android:text="记住密码" />
+
+     <Button
+         android:id="@+id/btn_login"
+         android:layout_width="100dp"
+         android:layout_height="wrap_content"
+         android:layout_alignRight="@+id/editText1"
+         android:layout_marginRight="5dp"
+         android:background="@drawable/btn"
+         android:textSize="16sp"
+         android:layout_alignTop="@+id/checkBox1"
+         android:layout_alignBottom="@+id/checkBox1"
+         android:text="登录" />
+     
+    </RelativeLayout>
+    
+    <TableLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+     
+        <TableRow 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            
+                <CheckBox
+                    android:id="@+id/login_cb_visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="隐身登录"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#7fffffff" />
+
+                <CheckBox
+                    android:id="@+id/login_cb_openvibra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开启震动"
+                    android:textColor="#7fffffff" />
+        </TableRow>
+        <TableRow 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            
+                <CheckBox
+                    android:id="@+id/login_cb_visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="接受消息"
+                    android:textColor="#7fffffff" />
+
+                <CheckBox
+                    android:id="@+id/login_cb_openvibra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="静音登录"
+                    
+                    android:textColor="#7fffffff" />
+        </TableRow>
+        
+</TableLayout>
+    
+    
+</LinearLayout>
+
+<!-- bottom布局 -->
+<LinearLayout 
+    android:id="@+id/login_bottom_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom"
+    
+    >
+    <ImageButton 
+        android:id="@+id/login_botton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bottom_selector"
+        android:clickable="true"
+        />
+    
+</LinearLayout>
+ 
+</LinearLayout>
